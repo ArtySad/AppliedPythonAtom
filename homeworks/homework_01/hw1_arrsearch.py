@@ -2,15 +2,14 @@
 # coding: utf-8
 
 
-def find_indices(input_list, n):
-    length = len(input_list)
+def find_indices(input_list, n):    
     i = 0
-    while i < length:
-        j = i+1
-        while j < length:
-            if input_list[i] + input_list[j] == n:
-                a = (i, j)
-                return a
-            j += 1
-        i += 1
+    j = len(input_list)-1
+    while i!=j:
+        if input_list[i] + input_list[j] == n:
+            return (i, j)
+        elif input_list[i] + input_list[j] < n:
+           i=i+1
+        elif  input_list[i] + input_list[j] > n: 
+           j=j-1        
     return
