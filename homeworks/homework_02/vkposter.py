@@ -61,3 +61,4 @@ class VKPoster:
         :return: Список из post_id размером К из популярных постов. list
         '''
         pass
+    
